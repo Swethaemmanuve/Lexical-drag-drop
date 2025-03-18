@@ -1,0 +1,172 @@
+/* Main container styles */
+.editor-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Input section styles */
+.input-section {
+  display: flex;
+  gap: 10px;
+}
+
+.text-input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.add-button {
+  padding: 8px 16px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.add-button:hover {
+  background-color: #3a80d2;
+}
+
+/* Stored values section */
+.stored-values {
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 10px;
+  background-color: #f8f8f8;
+}
+
+.values-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.draggable-item {
+  background-color: #e0e0ff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: grab;
+  border: 1px solid #c0c0ff;
+  user-select: none;
+}
+
+.draggable-item:hover {
+  background-color: #d0d0ff;
+}
+
+/* Editor section */
+.editor-section {
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.editor-inner {
+  position: relative;
+  background-color: white;
+}
+
+.editor-input {
+  min-height: 400px; /* Increased height for more drag space */
+  padding: 20px;
+  border: none;
+  outline: none;
+  resize: none;
+  font-size: 16px;
+  line-height: 1.5;
+  position: relative; /* Important for absolute positioning of children */
+}
+
+.editor-placeholder {
+  color: #999;
+  overflow: hidden;
+  position: absolute;
+  text-overflow: ellipsis;
+  top: 50px;
+  left: 20px;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Draggable blocks in editor */
+.draggable-block-node {
+  margin: 0;
+  padding: 0;
+  position: relative; /* Important for absolute positioning */
+}
+
+.draggable-block {
+  background-color: #f0f0ff;
+  border: 1px solid #d0d0ff;
+  border-radius: 4px;
+  padding: 10px;
+  cursor: move;
+  position: absolute; /* This is key - allows free positioning */
+  min-width: 100px;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.draggable-block:hover {
+  background-color: #e0e0ff;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+.draggable-block.dragging {
+  opacity: 0.5;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+/* Button styles */
+.insert-block-button {
+  margin: 10px 20px;
+  padding: 8px 16px;
+  background-color: #5a6cdb;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.insert-block-button:hover {
+  background-color: #4a5ccb;
+}
+
+/* Lexical editor styling */
+.editor-paragraph {
+  margin: 0;
+  position: relative;
+}
+
+.editor-text-bold {
+  font-weight: bold;
+}
+
+.editor-text-italic {
+  font-style: italic;
+}
+
+.editor-text-underline {
+  text-decoration: underline;
+}
+.editor-box {
+  border: 1px solid #cccccc;
+  padding: 10px;
+  min-height: 200px;
+  background: #f9f9f9;
+}
+.toolbar button {
+  margin-right: 5px;
+}
